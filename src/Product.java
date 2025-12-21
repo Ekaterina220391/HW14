@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Product {
+    public static Order Arrays;
     public int id;
     public String name;
     public int price;
@@ -29,5 +30,5 @@ public class Product {
 }
 
 
-}
+
 

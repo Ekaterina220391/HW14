@@ -9,8 +9,11 @@ public class Main {
         System.out.println(phone1.toString());
         System.out.println(phone2.toString());
         System.out.println(phone3.toString());
-        Product[] basket = {phone1, phone2, phone3};
-        Order order = new Order("CustomerName", basket);
+        Product [] arrayProduct = { phone1, phone2,phone3 };
+        Order basket1 = new Order(" Покупатель1 ",arrayProduct);
+        System.out.println(basket1);
+
+
 
 
     }
