@@ -4,18 +4,18 @@ import java.util.Objects;
 public class Order {
     public Product[] basket;
     public String custumer;
-    int i=0;
+
 
     public Order(String custumer, Product[] basket) {
         this.custumer = custumer;
         this.basket = basket;
 
     }
-    @Override
-        public String toString() {
-            return "Покупатель: " + this.custumer + Arrays.toString(basket) ;
 
-        }
+    @Override
+    public String toString() {
+        return "Покупатель: " + this.custumer + Arrays.toString(basket);
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -23,34 +23,32 @@ public class Order {
             return false;
         }
         Order order = (Order) o;
-        return custumer == order.custumer && Objects.equals(custumer, order.basket);
+        if (!Objects.equals(custumer, order.custumer)) return false;
+        if (basket == null && order.basket == null) return true;
+        if (basket == null || order.basket == null) return false;
+        if (basket.length != order.basket.length) return false;
+
         for (int i = 0; i < basket.length; i++) {
-            if (basket != null && basket.length > 0) {
+            if (!Objects.equals(basket[i], order.basket[i])) {
+                return false;
             }
         }
-    }
-        @Override
-        public boolean equals(Product o ) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Product product = (Product) o;
-        return id == product.id && Objects.equals(category, product.category);
-          }
-
-        }
-
-
-
-
-
-
-
+        return true;
 
 
 
     }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
