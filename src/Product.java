@@ -1,7 +1,6 @@
 import java.util.Objects;
 
 public class Product {
-    public static Order Arrays;
     public int id;
     public String name;
     public int price;
@@ -18,6 +17,7 @@ public class Product {
     public String toString() {
         return "Товар [" + "артикул= " + this.id + ",название= " + this.name + ", цена=" + this.price + ", категория=" + this.category + "]";
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
