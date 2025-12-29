@@ -48,9 +48,10 @@ public class Order {
             if (!basket[i].equals(order.basket[i])) {
                 return false;
             }
+        }
             return true;
         }
-    }
+
 }
 
 
